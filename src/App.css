@@ -1,42 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+main {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-box {
+    color: white;
+    background-color: #0009;
+    border-radius: 20px;
+    border: solid #0000 2px;
+    padding: 30px;
+    transition: .4s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.main-box:hover {
+    background-color: #000A;
+    border-color:#000F;
 }
 
-.card {
-  padding: 2em;
+input {
+    background-color: white;
+    color: black;
+    border: solid #0000 2px;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    transition: .4s;
+    width: fit-content;
+    min-width: 100px;
 }
 
-.read-the-docs {
-  color: #888;
+input:is(:hover, :active, :focus-visible) {
+    border-color: var(--input-to-hsl-color); 
 }
+

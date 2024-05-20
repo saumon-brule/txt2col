@@ -124,9 +124,11 @@ export default function App() {
         } else {
             if (letterIntervalIdsRef.current) {
                 clearInterval(letterIntervalIdsRef.current)
+                letterIntervalIdsRef.current = undefined
             }
             if (wordTimeoutIdRef.current) {
                 clearTimeout(wordTimeoutIdRef.current)
+                wordTimeoutIdRef.current = undefined
             }
         }
     }, [text, placeholder, wordTimeoutIdRef, letterIntervalIdsRef])

@@ -79,8 +79,8 @@ const placeholders = [
     "random things",
 ]
 
-const ANIMATION_START = 2500 // ms
-const ANIMATION_END = 500 // ms
+const ANIMATION_START = 2300 // ms
+const ANIMATION_END = 300 // ms
 
 export default function App() {
     const [text, setText] = useState("");
@@ -209,11 +209,7 @@ export default function App() {
     }
 
     return (
-        <main style={{
-            "--input-to-hsl-color": `${rgbColor[0]}, ${rgbColor[1]}, ${rgbColor[2]}`,
-            "--slider-animation-start-duration": `${ANIMATION_START}ms`,
-            "--slider-animation-end-duration": `${ANIMATION_END}ms`,
-        }} >
+        <main>
             <div className="main-box">
                 <h1>Awesome Text to Color Converter</h1>
                 <input type="text" placeholder={placeholderStart + placeholder + placeholderEnd} onChange={(e) => { setText(e.target.value) }} />

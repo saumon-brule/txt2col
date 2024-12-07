@@ -1,2 +1,2 @@
-# txt2hsl
-Transform any text to HSL color
+# txt2col
+Transform any text to a color
